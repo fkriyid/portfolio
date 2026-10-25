@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Rich from './components/Rich'
+import rich from './components/rich'
 import Media from './components/Media'
 import { profile as p } from './data/profile'
 import { featured, more, type Project, type Kind } from './data/projects'
