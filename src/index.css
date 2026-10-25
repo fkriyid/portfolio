@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@theme{--color-bg:#FAFAF7;--color-ink:#102A4C;--color-accent:#2563EB;--color-mute:#5B6B80;--color-line:#DCE3EB;--font-sans:"Inter",system-ui,sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{background:#EAF1FF;color:var(--color-ink);font-family:var(--font-sans)}
+:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+
+@utility glass {
+  background-color: rgba(255, 255, 255, 0.22);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.08) 60%);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 40px rgba(37, 99, 235, 0.14), 0 0 0 1px rgba(16, 42, 76, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+}
+.aurora{position:fixed;z-index:-20;border-radius:9999px;filter:blur(90px);opacity:.6;pointer-events:none;will-change:transform}
+.aurora-a{width:46vw;height:46vw;left:-8vw;top:-10vw;background:#60A5FA;animation:drift-a 22s ease-in-out infinite}
+.aurora-b{width:42vw;height:42vw;right:-8vw;top:18vh;background:#A78BFA;animation:drift-b 26s ease-in-out infinite}
+.aurora-c{width:50vw;height:40vw;left:22vw;bottom:-18vw;background:#22D3EE;animation:drift-c 30s ease-in-out infinite}
+@keyframes drift-a{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(10vw,12vh,0) scale(1.15)}}
+@keyframes drift-b{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-12vw,10vh,0) scale(1.1)}}
+@keyframes drift-c{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-8vw,-14vh,0) scale(1.2)}}
